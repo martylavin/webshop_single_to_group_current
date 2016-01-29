@@ -1,0 +1,42 @@
+
+<br>
+<h1>Listing Admins</h1>
+
+<div>
+
+<table class="table table-bordered table-striped center-table" 
+
+border="1" style="width:400px" cellpadding="8">
+
+  <thead>
+    <tr>
+      
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email address</th>
+      <th>Show/email</th>
+      <th>Edit</th>
+      <th>Destroy/Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admins.each do |admin| %>
+      <tr>
+        <td><%= admin.first_name %></td>
+        <td><%= admin.last_name %></td>
+        <td><%= admin.email %></td>
+        <td><%= link_to 'Show/email', admin %></td>
+        <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
+        <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Admin', new_admin_path, class: "btn brn-lg btn-primary" %><br>
+
+</div>
+
+

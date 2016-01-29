@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @admin.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @admin.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @admin.email %>
+</p>
+
+<%= link_to 'Back to the Administrators List', admins_path, class: "btn brn-lg btn-primary" %>

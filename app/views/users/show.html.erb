@@ -1,0 +1,25 @@
+<div>
+
+<h1>Legion Post 854 Email Member</h1>
+
+
+<%= form_for(@user) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+ 
+<% end %>
+
+
+
+<p><%= link_to 'Email the single Legion Member', mail_user_path(@user), class: "btn brn-lg btn-primary" %></p> 
+&nbsp
+<%= link_to 'Back to a List of Members', users_path, class: "btn brn-lg btn-primary" %>
+<br>
+</div>
+<br>

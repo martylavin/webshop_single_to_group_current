@@ -1,0 +1,42 @@
+
+<h1>Legion Post 854 Email Members</h1>
+<br>
+<div>
+
+<table class="table table-bordered table-striped center-table" 
+
+border="1" style="width:400px" cellpadding="8">
+
+  <thead>
+    <tr>
+      
+      <th><%= link_to "Name", :sort => "name" %></th>
+      <th><%= link_to "Email address", :sort => "email" %></th>
+      <!--<th>Name of Members</th>-->
+      <!--<th>Email address</th>-->
+      <th>Email Single User</th>
+      <th>Edit</th>
+      <th>Destroy/Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Show/email', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<p><%= link_to 'New Member', new_user_path, class: "btn brn-lg btn-primary" %></p>
+<%= link_to 'Email all Legion Members', spam_users_path(@users), class: "btn brn-lg btn-primary" %> 
+
+
+</div>
