@@ -20,7 +20,7 @@
     <%= f.text_field :last_name %>
   </div></br>
   <div class="field">
-    <%= f.label :email %>&nbsp
+   &nbsp &nbsp &nbsp <%= f.label :email %>&nbsp
     <%= f.text_field :email %>
   </div></br>
   <div class="field">
@@ -31,7 +31,7 @@
     <%= f.label :confirm_password %>&nbsp
     <%= f.password_field :password_confirmation %>
   </div></br>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions" >
+     <%= f.submit :class => 'btn brn-lg btn-primary'%>
   </div>
 <% end %>
