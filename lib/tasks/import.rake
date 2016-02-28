@@ -2,7 +2,7 @@ namespace :import do
   desc "imports legion email data from a csv file"
   task :data => :environment do 
     require 'csv'
-      CSV.foreach('lib/tasks/2016_email_3.csv') do |row|
+      CSV.foreach('lib/tasks/2016_email_2.csv') do |row|
       first_name = row[1]
       last_name = row[2]
       email = row[0]
