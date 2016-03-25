@@ -13,13 +13,19 @@
 
 
   <div class="form-group">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :name1 %><br>
+    <%= f.text_field :name, :placeholder => "type name here" %> 
   </div>
   <div class="form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :placeholder => "type email here" %> 
   </div>
+
+    <div class="form-group">
+    <%= f.label :message %><br>
+    <%= f.text_area :message, :placeholder => "type message here" %>
+  </div>
+
   <div class="form-group">
     <%= f.submit "Submit", class: "btn brn-lg btn-primary" %>
   </div>
