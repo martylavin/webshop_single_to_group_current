@@ -48,7 +48,8 @@ class UsersController < ApplicationController
       if @user.save
         #@users = User.all
         #UserMailer.newsletter(@users).deliver
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        UserMailer.contactus(@user).deliver
+        format.html { redirect_to @user, notice: 'New email member/user was successfully created and sign up email sent.' }
         format.json { render action: 'show', status: :created, location: @user }
       else
         format.html { render action: 'new' }
@@ -62,7 +63,8 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        UserMailer.contactus(@user).deliver
+        format.html { redirect_to @user, notice: 'E-mail message sent to member and the member/user information was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -85,6 +87,7 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+      #@@user = User.find(params[:id])
     end
     
 

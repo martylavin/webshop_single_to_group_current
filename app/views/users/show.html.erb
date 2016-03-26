@@ -13,18 +13,19 @@
     <%= f.text_field :email %>
   </div>
   
-
    <div class="form-group">
-    <%= f.label :message %><br>
+    <%= f.label :Email_message %><br>
     <%= f.text_area :message, size: "24x6", :placeholder => "Type your message here."  %>
   </div>
-
+   
 <% end %>
 
 
-
+<!--
 <p><%= link_to 'Email the single Legion Member', mail_user_path(@user), class: "btn brn-lg btn-primary" %></p> 
 &nbsp
+-->
+
 <%= link_to 'Back to a List of Members', users_path, class: "btn brn-lg btn-primary" %>
 <br>
 </div>

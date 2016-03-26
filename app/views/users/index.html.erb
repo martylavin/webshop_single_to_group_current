@@ -14,8 +14,8 @@ border="1" style="width:400px" cellpadding="8">
       <th><%= link_to "Email address", :sort => "email" %></th>
       <!--<th>Name of Members</th>-->
       <!--<th>Email address</th>-->
-      <th>Email Single User</th>
-      <th>Edit</th>
+      <th>Show</th>
+      <th>Edit and Email Single User</th>
       <th>Destroy/Delete</th>
     </tr>
   </thead>
@@ -25,8 +25,8 @@ border="1" style="width:400px" cellpadding="8">
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= link_to 'Show/email', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit/Email', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
