@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WebshopFive</title>
+  <title>Single and Group email</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -21,12 +21,12 @@
 						<a href="http://www.legionpost854.com/">Legion Website</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 						<%= link_to "Member List", users_path %>
 					</ul>
-					<!--<ul class="nav navbar-nav navbar-left" id="logo" >
-						<li><a href="http://www.legionpost854.com/">Legion Website</a></li>&nbsp 
-					</ul>-->
 				<% else %>
-					<ul class="nav navbar-nav pull-right" id="logo" >
+					<ul class="nav navbar-nav navbar-right" id="logo" >
 						<%= link_to "Log In", login_path %>
+					</ul>
+					<ul class="nav navbar-nav navbar-left" id="logo" >
+						<a href="http://www.legionpost854.com/">Legion Website</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 					</ul>
 				<% end %>
 			</nav>
