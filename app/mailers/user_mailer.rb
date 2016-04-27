@@ -6,7 +6,7 @@ class UserMailer < ActionMailer::Base
     @greeting = "Hi"
     #attachments['rails.png'] = File.read("app/assets/images/rails.png")
     #attachments['rails.2016_JanFebNL.pdf'] = File.read("app/assets/images/2016_JanFebNL.pdf")
-    attachments['rails.2016_MARAPR_v1.pdf'] = File.read("app/assets/images/2016_MARAPR_v1.pdf")
+    attachments['rails.2016_MAYJUNE_v1.pdf'] = File.read("app/assets/images/2016_MAYJUNE_v1.pdf")
     mail(to: user.email, subject: "The Legion Post 854 Email for #{user.name } ")
   end
 
@@ -22,7 +22,7 @@ class UserMailer < ActionMailer::Base
     @mail_array_string_final = mail_array_string_final
     #attachments['rails.png'] = File.read("app/assets/images/rails.png")
     #attachments['rails.2016_JanFebNL.pdf'] = File.read("app/assets/images/2016_JanFebNL.pdf")
-    attachments['rails.2016_MARAPR_v1.pdf'] = File.read("app/assets/images/2016_MARAPR_v1.pdf")
+    attachments['rails.2016_MAYJUNE_v1.pdf'] = File.read("app/assets/images/2016_MAYJUNE_v1.pdf")
     mail(to: mail_array_string_final, subject: "Legion Post 854 Newsletter is attached")
    
   end

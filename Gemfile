@@ -13,6 +13,8 @@ end
 
 group :development do
   gem 'sqlite3', '1.3.8'
+  gem 'better_errors', '~> 1.1.0'
+  gem 'binding_of_caller', '~> 0.7.2'
 end
 
 gem 'bootstrap-sass'
