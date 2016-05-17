@@ -8,11 +8,13 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     #@users = User.all
-     #@users = User.all
-     #@users = User.order(:name)
-      #@users = User.order(params[:sort])
-    #@users = User.order(params[:sort])
-     @users = User.order(:name).paginate(:page => params[:page], :per_page => 10)
+    #@users = User.order(:name).paginate(:page => params[:page], :per_page => 10)
+    if params[:search]
+     @users = User.search(params[:search])
+    else
+      #@users = User.order(:name).paginate(:page => params[:page], :per_page => 10)
+      @users = User.all.order(:name)
+    end
   end
 
   def mail

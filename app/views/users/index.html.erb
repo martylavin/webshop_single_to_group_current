@@ -1,7 +1,29 @@
 
 <!--<h1>Legion Post 854 Email Members</h1>-->
-  <%= will_paginate @users, renderer: BootstrapPagination::Rails %>
+ 
 <div>
+  </br>
+    <%= form_tag(users_path, :method => "get", id: "search-form") do %>
+    <%= label_tag(:search, "Search by Name or Email ") %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Name or Email" %>
+    <%= submit_tag "Search", class: "btn brn-lg btn-primary" %>
+    <% end %>
+  </br>
+
+  <% if params[:search] == "" %>
+    <!-- do nothing -->
+    <% else %>
+      <% if @users.present? %> 
+            <% if @users.count === 1 %> 
+              <h4>There is one name containing the terms <%= params[:search] %>.</h4>
+            <% end %>
+           <% if @users.count > 1 %> 
+              <h4>There are  <%= pluralize(@users.count, "names") %> containing the terms <%= params[:search] %>.</h4>
+           <% end %>
+      <% else %>
+          <h4>There are zero members containing the term(s) <%= params[:search] %>.</h4>
+      <% end %>
+  <% end %>
 
 <table class="table table-bordered table-striped center-table" 
 
@@ -32,7 +54,7 @@ border="0.5" style="width:450px" cellpadding="2">
     <% end %>
   </tbody>
 </table>
-<%= will_paginate @users, renderer: BootstrapPagination::Rails %>
+
 <br>
 
 <p><%= link_to 'New Member', new_user_path, class: "btn brn-lg btn-primary" %></p>
