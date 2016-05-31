@@ -4,11 +4,11 @@ class UserMailer < ActionMailer::Base
   def contactus(user)
     @user = user
     #@greeting = "Hi"
-    @greeting = "Sad News"
+    @greeting = "American Legion Post 854 Carries On"
     #attachments['rails.png'] = File.read("app/assets/images/rails.png")
     #attachments['rails.2016_JanFebNL.pdf'] = File.read("app/assets/images/2016_JanFebNL.pdf")
     #attachments['rails.2016_MAYJUNE_v1.pdf'] = File.read("app/assets/images/2016_MAYJUNE_v1.pdf")
-    attachments['Steve_Davies.pdf'] = File.read("app/assets/images/Steve_Davies.pdf")
+    #attachments['Steve_Davies.pdf'] = File.read("app/assets/images/Steve_Davies.pdf")
     mail(to: user.email, subject: "The Legion Post 854 Email for #{user.name } ")
   
     
@@ -16,7 +16,7 @@ class UserMailer < ActionMailer::Base
 
   def newsletter(users)
     #@greeting = "Hi"
-    @greeting = "Sad News"
+    @greeting = "American Legion Post 854 Carries On"
     @users = users
   
     mail_array = [] 
@@ -28,8 +28,8 @@ class UserMailer < ActionMailer::Base
     #attachments['rails.png'] = File.read("app/assets/images/rails.png")
     #attachments['rails.2016_JanFebNL.pdf'] = File.read("app/assets/images/2016_JanFebNL.pdf")
     #attachments['rails.2016_MAYJUNE_v1.pdf'] = File.read("app/assets/images/2016_MAYJUNE_v1.pdf")
-    attachments['Steve_Davies.pdf'] = File.read("app/assets/images/Steve_Davies.pdf")
-    mail(to: mail_array_string_final, subject: "Steve Davies -- Please read attachment for information")
+    #attachments['Steve_Davies.pdf'] = File.read("app/assets/images/Steve_Davies.pdf")
+    mail(to: mail_array_string_final, subject:  "The Legion Post 854 Email for #{user.name } ")
    
   end
 
