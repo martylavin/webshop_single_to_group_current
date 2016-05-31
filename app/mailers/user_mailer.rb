@@ -29,7 +29,7 @@ class UserMailer < ActionMailer::Base
     #attachments['rails.2016_JanFebNL.pdf'] = File.read("app/assets/images/2016_JanFebNL.pdf")
     #attachments['rails.2016_MAYJUNE_v1.pdf'] = File.read("app/assets/images/2016_MAYJUNE_v1.pdf")
     #attachments['Steve_Davies.pdf'] = File.read("app/assets/images/Steve_Davies.pdf")
-    mail(to: mail_array_string_final, subject:  "The Legion Post 854 Email for #{user.name } ")
+    mail(to: mail_array_string_final, subject: "The Legion Post 854 Email for the new Movie Clip")
    
   end
 
