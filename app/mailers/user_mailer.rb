@@ -9,7 +9,8 @@ class UserMailer < ActionMailer::Base
     #attachments['rails.2016_JanFebNL.pdf'] = File.read("app/assets/images/2016_JanFebNL.pdf")
     #attachments['rails.2016_MAYJUNE_v1.pdf'] = File.read("app/assets/images/2016_MAYJUNE_v1.pdf")
     #attachments['Steve_Davies.pdf'] = File.read("app/assets/images/Steve_Davies.pdf")
-    attachments['JULYAUGUST2016v1.pdf'] = File.read("app/assets/images/2016_JULYAUGUST2016v1.pdf")
+    #attachments['JULYAUGUST2016v1.pdf'] = File.read("app/assets/images/2016_JULYAUGUST2016v1.pdf")
+    attachments['2016_SeptOct_v1.pdf'] = File.read("app/assets/images/2016_SeptOct_v1.pdf")
     mail(to: user.email, subject: "The Legion Post 854 Email for #{user.name } ")
   
     
@@ -30,7 +31,8 @@ class UserMailer < ActionMailer::Base
     #attachments['rails.2016_JanFebNL.pdf'] = File.read("app/assets/images/2016_JanFebNL.pdf")
     #attachments['rails.2016_MAYJUNE_v1.pdf'] = File.read("app/assets/images/2016_MAYJUNE_v1.pdf")
     #attachments['Steve_Davies.pdf'] = File.read("app/assets/images/Steve_Davies.pdf") JULYAUGUST2016v1.pdf
-    attachments['JULYAUGUST2016v1.pdf'] = File.read("app/assets/images/2016_JULYAUGUST2016v1.pdf")
+    #attachments['JULYAUGUST2016v1.pdf'] = File.read("app/assets/images/2016_JULYAUGUST2016v1.pdf")
+    attachments['2016_SeptOct_v1.pdf'] = File.read("app/assets/images/2016_SeptOct_v1.pdf")
     mail(to: mail_array_string_final, subject: "The Legion Post 854 Email Newsletter")
    
   end
